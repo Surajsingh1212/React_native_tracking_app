@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon2 from 'react-native-vector-icons/FontAwesome6'
 import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon4 from 'react-native-vector-icons/AntDesign'
 import MapView from 'react-native-maps';
 
 
 const LiveTracking = () => {
-
+    const [bottomVisible, setBottomVisible] = useState(false)
     return (
         <View className="w-full h-screen relative">
             <MapView
@@ -34,83 +35,86 @@ const LiveTracking = () => {
                 </View>
             </View>
 
-            <View className="absolute top-[80%] right-5">
+            <TouchableOpacity className="absolute top-[80%] right-5" onPress={() => setBottomVisible(!bottomVisible)}>
                 <View className="bg-white p-4 rounded-full">
-                    <Text className="text-cyan-400 text-md"><Icon className="" name="menu-open" size={20}></Icon></Text>
+                    <Text className="text-cyan-400 text-md">{bottomVisible ? <Icon4 className="" name="menu-unfold" size={20}/> : <Icon4 className="" name="menu-fold" size={20}/>}</Text>
                 </View>
-            </View>
-            <View className=" absolute bottom-28 left-5 w-[80%]">
-                <View className=" bg-slate-100 p-5 rounded-xl">
-                    <View className="flex flex-row align-middle justify-between px-5">
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="wifi-calling-3" size={20} /></Text>
+            </TouchableOpacity>
+            {bottomVisible && (
+                <View className=" absolute bottom-28 left-5 w-[80%]">
+                    <View className=" bg-slate-100 p-5 rounded-xl">
+                        <View className="flex flex-row align-middle justify-between px-5">
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="wifi-calling-3" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Call Driver</Text>
                                 </View>
-                                <Text className="text-center">Call Driver</Text>
+                            </View>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="update" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Trip Details</Text>
+                                </View>
+                            </View>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon3 name="navigation-variant-outline" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Navigation</Text>
+                                </View>
+                            </View>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="battery-alert" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Battery Status</Text>
+                                </View>
                             </View>
                         </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="update" size={20} /></Text>
+                        <View className="flex flex-row align-middle justify-between px-5 mt-4">
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="wifi-calling-3" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Call Driver</Text>
                                 </View>
-                                <Text className="text-center">Trip Details</Text>
                             </View>
-                        </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon3 name="navigation-variant-outline" size={20} /></Text>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="update" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Trip Details</Text>
                                 </View>
-                                <Text className="text-center">Navigation</Text>
                             </View>
-                        </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="battery-alert" size={20} /></Text>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon3 name="navigation-variant-outline" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Navigation</Text>
                                 </View>
-                                <Text className="text-center">Battery Status</Text>
+                            </View>
+                            <View>
+                                <View className="flex flex-col items-center">
+                                    <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
+                                        <Text className="text-white text-xl"><Icon name="battery-alert" size={20} /></Text>
+                                    </View>
+                                    <Text className="text-center">Battery Status</Text>
+                                </View>
                             </View>
                         </View>
                     </View>
-                    <View className="flex flex-row align-middle justify-between px-5 mt-4">
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="wifi-calling-3" size={20} /></Text>
-                                </View>
-                                <Text className="text-center">Call Driver</Text>
-                            </View>
-                        </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="update" size={20} /></Text>
-                                </View>
-                                <Text className="text-center">Trip Details</Text>
-                            </View>
-                        </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon3 name="navigation-variant-outline" size={20} /></Text>
-                                </View>
-                                <Text className="text-center">Navigation</Text>
-                            </View>
-                        </View>
-                        <View>
-                            <View className="flex flex-col items-center">
-                                <View className="bg-cyan-500 px-5 py-4 rounded-full mx-1">
-                                    <Text className="text-white text-xl"><Icon name="battery-alert" size={20} /></Text>
-                                </View>
-                                <Text className="text-center">Battery Status</Text>
-                            </View>
-                        </View>
-                    </View>
                 </View>
-            </View>
+            )}
+
         </View>
     );
 }

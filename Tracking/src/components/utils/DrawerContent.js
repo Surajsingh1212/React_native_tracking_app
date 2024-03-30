@@ -30,49 +30,49 @@ const DrawerContent = (props) => {
             onPress={() => { setActiveScreen('LiveTracking'); props.navigation.navigate('LiveTracking') }}>
             <View className="transform translate-y-1">
               <Icon3 name="track-changes" color={activeScreen === 'LiveTracking' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> LiveTracking</Text>
+            </View> Live Tracking</Text>
 
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'CreateJob' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('CreateJob'); props.navigation.navigate('CreateJob') }}>
             <View className="transform translate-y-1">
               <Icon2 name="paperclip" color={activeScreen === 'CreateJob' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> CreateJob</Text>
+            </View> Create Job</Text>
 
-          <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'JobsDetails' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
-            onPress={() => { setActiveScreen('JobsDetails'); props.navigation.navigate('JobsDetails') }}>
+          <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'ViewJobs' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
+            onPress={() => { setActiveScreen('ViewJobs'); props.navigation.navigate('ViewJobs') }}>
             <View className="transform translate-y-1">
-              <Icon name="newspaper-variant-outline" color={activeScreen === 'JobsDetails' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> JobsDetails</Text>
+              <Icon name="newspaper-variant-outline" color={activeScreen === 'ViewJobs' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
+            </View> View Jobs</Text>
 
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'LockDetails' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('LockDetails'); props.navigation.navigate('LockDetails') }}>
             <View className="transform translate-y-1">
               <Icon name="lock" color={activeScreen === 'LockDetails' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> LockDetails</Text>
+            </View> Lock Details</Text>
 
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'ManageTrip' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('ManageTrip'); props.navigation.navigate('ManageTrip') }}>
             <View className="transform translate-y-1">
               <Icon2 name="car" color={activeScreen === 'ManageTrip' ? '#ffffff' : 'rgb(75 85 99)'} size={26}  />
-            </View> ManageTrip</Text>
+            </View> Manage Trip</Text>
 
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'TripDetails' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('TripDetails'); props.navigation.navigate('TripDetails') }}>
             <View className="transform translate-y-1">
               <Icon name="newspaper" color={activeScreen === 'TripDetails' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> TripDetails</Text>
+            </View> Trip Details</Text>
 
             <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'Zeofence' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('Zeofence'); props.navigation.navigate('Zeofence') }}>
             <View className="transform translate-y-1">
               <Icon2 name="map-location-dot" color={activeScreen === 'Zeofence' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> Add Zeofence</Text>
+            </View> Add Geofence</Text>
 
-            <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'ZeofenceDetails' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
-            onPress={() => { setActiveScreen('ZeofenceDetails'); props.navigation.navigate('ZeofenceDetails') }}>
+            <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'ViewGeofence' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
+            onPress={() => { setActiveScreen('ViewGeofence'); props.navigation.navigate('ViewGeofence') }}>
             <View className="transform translate-y-1">
-              <Icon2 name="magnifying-glass-location" color={activeScreen === 'ZeofenceDetails' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
-            </View> Zeofence Details</Text>
+              <Icon2 name="magnifying-glass-location" color={activeScreen === 'ViewGeofence' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
+            </View> Geofence Details</Text>
 
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'Profile' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('Profile'); props.navigation.navigate('Profile') }}>

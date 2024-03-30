@@ -10,10 +10,13 @@ const Zeofence = () => {
     const handleAddZeofence = () => {
         Navigation.navigate('ZeofenceDetails')
     }
+    const handlePolygonMap = () => {
+        Navigation.navigate('GeofencePolygonMap')
+    }
     return (
         <View className="flex flex-1 justify-center items-center bg-cyan-500">
             <View className="relative flex justify-center items-center z-40">
-                <Image
+                <Image 
                     source={require("../../assets/zeofence/Zeofence.png")}
                     className="h-28 w-28 rounded-full absolute bottom-[-50] left-150  shadow-3xl"
                 />
@@ -67,6 +70,11 @@ const Zeofence = () => {
                         <Text className="text-lg text-slate-700">Description</Text>
                         <View>
                             <Fields placeholder="+9123232332" />
+                        </View>
+                    </View>
+                    <View className="px-10">
+                        <View className="rounded-xl mt-4 w-100">
+                            <Button title="Geofence Polygon Map" onPress={handlePolygonMap} color="#45dfg"/>
                         </View>
                     </View>
                     <View className="px-10">

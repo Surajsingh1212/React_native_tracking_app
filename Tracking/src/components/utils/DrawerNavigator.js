@@ -13,6 +13,9 @@ import { useState } from 'react';
 import CreateTrip from '../home/CreateTrip';
 import Zeofence from '../home/Zeofence';
 import ZeofenceDetails from '../home/ZeofenceDetails';
+import ViewJobs from '../home/ViewJobs';
+import ViewGeofence from '../home/ViewGeofence';
+import GeofencePolygonMap from '../home/GeofencePolygonMap';
 
 const Drawer = createDrawerNavigator();
 
@@ -24,6 +27,7 @@ const DrawerNavigator=()=>{
       <Drawer.Screen name="Profile" component={Profile}/>
       <Drawer.Screen name="CreateJob" component={CreateJob}/>
       <Drawer.Screen name="JobsDetails" component={JobsDetails}/>
+      <Drawer.Screen name="ViewJobs" component={ViewJobs}/>
       <Drawer.Screen name="LiveTracking" component={LiveTracking}/>
       <Drawer.Screen name="LockDetails" component={LockDetails}/>
       <Drawer.Screen name="ManageTrip" component={ManageTrip}/>
@@ -31,6 +35,8 @@ const DrawerNavigator=()=>{
       <Drawer.Screen name="CreateTrip" component={CreateTrip}/>
       <Drawer.Screen name="Zeofence" component={Zeofence}/>
       <Drawer.Screen name="ZeofenceDetails" component={ZeofenceDetails}/>
+      <Drawer.Screen name="ViewGeofence" component={ViewGeofence}/>
+      <Drawer.Screen name="GeofencePolygonMap" component={GeofencePolygonMap}/>
     </Drawer.Navigator>
   );
 }
