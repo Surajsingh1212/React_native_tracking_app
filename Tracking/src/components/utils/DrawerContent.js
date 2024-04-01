@@ -85,6 +85,12 @@ const DrawerContent = (props) => {
             <View className="transform translate-y-1">
               <Icon2 name="circle-user" color={activeScreen === 'Profile' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
             </View> Profile</Text>
+
+          <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'polygonMap' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
+            onPress={() => { setActiveScreen('polygonMap'); props.navigation.navigate('polygonMap') }}>
+            <View className="transform translate-y-1">
+              <Icon2 name="circle-user" color={activeScreen === 'polygonMap' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
+            </View> Polygon Map </Text>
         </View>
       </DrawerContentScrollView>
       <View className=" px-3 py-2">

@@ -18,6 +18,7 @@ import ViewGeofence from '../home/ViewGeofence';
 import GeofencePolygonMap from '../home/GeofencePolygonMap';
 import Alert from '../home/Alert'
 import AlertDetails from '../home/AlertDetails';
+import PolygonMap from '../home/PolygonMap';
   
 const Drawer = createDrawerNavigator();
 
@@ -41,6 +42,7 @@ const DrawerNavigator=()=>{
       <Drawer.Screen name="GeofencePolygonMap" component={GeofencePolygonMap}/>
       <Drawer.Screen name="Alerts" component={Alert}/>
       <Drawer.Screen name="AlertDetails" component={AlertDetails}/>
+      <Drawer.Screen name="polygonMap" component={PolygonMap}/>
     </Drawer.Navigator>
   );
 }
