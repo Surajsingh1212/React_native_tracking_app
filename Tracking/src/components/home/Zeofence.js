@@ -74,7 +74,7 @@ const Zeofence = () => {
                     </View>
                     <View className="px-10">
                         <View className="rounded-xl mt-4 w-100">
-                            <Button title="Geofence Polygon Map" onPress={handlePolygonMap} color="#45dfg"/>
+                            <Button title="Geofence Polygon Map" onPress={handlePolygonMap} />
                         </View>
                     </View>
                     <View className="px-10">
@@ -83,7 +83,6 @@ const Zeofence = () => {
                         </View>
                     </View>
                 </ScrollView>
-
             </View>
         </View>
     );

@@ -74,6 +74,12 @@ const DrawerContent = (props) => {
               <Icon2 name="magnifying-glass-location" color={activeScreen === 'ViewGeofence' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
             </View> Geofence Details</Text>
 
+            <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'Alerts' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
+            onPress={() => { setActiveScreen('Alerts'); props.navigation.navigate('Alerts') }}>
+            <View className="transform translate-y-1">
+              <Icon3 name="notifications-active" color={activeScreen === 'Alerts' ? '#ffffff' : 'rgb(75 85 99)'} size={26} />
+            </View> Alerts</Text>
+
           <Text className={`py-3 px-3  shadow-2xl rounded-lg text-xl  ${activeScreen === 'Profile' ? 'bg-cyan-400 text-white' : 'bg-transparent text-gray-600'}`}
             onPress={() => { setActiveScreen('Profile'); props.navigation.navigate('Profile') }}>
             <View className="transform translate-y-1">

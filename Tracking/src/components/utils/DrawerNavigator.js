@@ -16,7 +16,9 @@ import ZeofenceDetails from '../home/ZeofenceDetails';
 import ViewJobs from '../home/ViewJobs';
 import ViewGeofence from '../home/ViewGeofence';
 import GeofencePolygonMap from '../home/GeofencePolygonMap';
-
+import Alert from '../home/Alert'
+import AlertDetails from '../home/AlertDetails';
+  
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator=()=>{
@@ -37,6 +39,8 @@ const DrawerNavigator=()=>{
       <Drawer.Screen name="ZeofenceDetails" component={ZeofenceDetails}/>
       <Drawer.Screen name="ViewGeofence" component={ViewGeofence}/>
       <Drawer.Screen name="GeofencePolygonMap" component={GeofencePolygonMap}/>
+      <Drawer.Screen name="Alerts" component={Alert}/>
+      <Drawer.Screen name="AlertDetails" component={AlertDetails}/>
     </Drawer.Navigator>
   );
 }
