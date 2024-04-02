@@ -3,20 +3,13 @@ import { View, Text, TextInput, ScrollView, } from 'react-native';
 import Icon2 from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
+import CustomHeader from '../utils/CustomHeader';
 
-
-const Home = () => {
+const Home = ({navigation}) => {
 
     return (
         <View className="w-full bg-cyan-400 h-screen">
-            <View className="flex justify-center items-center mt-5">
-                <View className="w-[90%] shadow-lg rounded-full border bg-white border-white px-12  relative">
-                    <TextInput className="ms-4" />
-                </View>
-                <View className="absolute right-14 ">
-                    <Icon2 name="search" size={20} />
-                </View>
-            </View>
+            <CustomHeader title="Home" navigation={navigation} notificationCount={5}/>
             <ScrollView>
             <View className="flex justify-center items-center mt-5">
                 <View className="w-[90%] bg-slate-100 shadow-lg p-5 rounded-xl">

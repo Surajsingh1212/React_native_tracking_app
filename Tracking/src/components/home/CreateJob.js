@@ -2,14 +2,17 @@ import React from 'react';
 import { View, Text, Image, ScrollView, Button,TextInput  } from 'react-native';
 import Fields from '../common/Fields';
 import { useNavigation } from '@react-navigation/native';
+import CustomHeader from '../utils/CustomHeader';
 
 
-const CreateJob = () => {
+const CreateJob = ({navigation}) => {
     const Navigation = useNavigation()
     const handleCreateJob=()=>{
         Navigation.navigate('JobsDetails')
     }
     return (
+      <View className="flex-1">
+         <CustomHeader title="CreateJob" navigation={navigation} notificationCount={3}/>
         <View className="flex flex-1 justify-center items-center bg-cyan-500">
         <View className="relative flex justify-center items-center z-40">
           <Image
@@ -165,6 +168,7 @@ const CreateJob = () => {
           </ScrollView>
   
         </View>
+      </View>
       </View>
     );
 }

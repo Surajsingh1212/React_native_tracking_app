@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6'
+import CustomHeader from '../utils/CustomHeader';
 
 
-
-const TripDetails = () => {
-
+const TripDetails = ({navigation}) => {
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader title="TripDetails" navigation={navigation} notificationCount={4}/>
             <View className="p-5 text-white  mx-11">
                 <View className="mt-5 flex-row justify-between">
                     <Text className="font-sans from-neutral-950 text-white text-xl">Vehicle No : ABI454S</Text>

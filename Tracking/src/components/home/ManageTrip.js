@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity,Button} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import CustomHeader from '../utils/CustomHeader';
 
 
-const ManageTrip = () => {
+const ManageTrip = ({navigation}) => {
     const Navigation = useNavigation();
     const handleTripDetails=()=>{
         Navigation.navigate('TripDetails')
@@ -13,6 +14,7 @@ const ManageTrip = () => {
     }
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader title="ManageTrip" navigation={navigation} notificationCount={4}/>
              <View className="flex justify-center items-center my-5">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">

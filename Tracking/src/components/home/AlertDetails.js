@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, ScrollView, Image } from 'react-native';
 import { Table, Row } from 'react-native-table-component'
+import CustomHeader from '../utils/CustomHeader';
 
 
-const AlertDetails = () => {
+const AlertDetails = ({navigation}) => {
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader title="AlertDetails" navigation={navigation} notificationCount={2}/>
             <View className="flex justify-center items-center mt-3">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">

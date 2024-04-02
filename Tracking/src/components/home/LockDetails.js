@@ -2,11 +2,13 @@ import React from 'react';
 import { View, Text, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons'
+import CustomHeader from '../utils/CustomHeader';
 
 
-const LockDetails = () => {
+const LockDetails = ({navigation}) => {
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader title="LockDetails" navigation={navigation} notificationCount={4}/>
             <View className="flex justify-center items-center mt-3">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">

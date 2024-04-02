@@ -2,8 +2,9 @@ import React from 'react';
 import { View, Text, ScrollView, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import CustomHeader from '../utils/CustomHeader';
 
-const ZeofenceDetails = () => {
+const ZeofenceDetails = ({navigation}) => {
     const Navigation = useNavigation()
     const handleViewGeofence = () => {
         Navigation.navigate('ViewGeofence')
@@ -17,6 +18,7 @@ const ZeofenceDetails = () => {
     ];
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader navigation={navigation} title="Geofence Details" notificationCount={4}/>
             <View className="flex justify-center items-center my-5">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">

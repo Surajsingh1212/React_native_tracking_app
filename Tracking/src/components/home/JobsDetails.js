@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Table, Row } from 'react-native-table-component'
+import CustomHeader from '../utils/CustomHeader';
 
 
-const JobsDetails = () => {
+const JobsDetails = ({navigation}) => {
     const tableData = [
         ["Company Name", "345DNSDS"],
         ["Branch Id", "43FDG5"],
@@ -31,6 +32,7 @@ const JobsDetails = () => {
     ];
     return (
         <View className="w-full bg-cyan-400 h-screen">
+            <CustomHeader title="JobsDetails" navigation={navigation} notificationCount={4}/>
             <View className="flex justify-center items-center mt-3">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">
