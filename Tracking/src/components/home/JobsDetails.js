@@ -36,7 +36,7 @@ const JobsDetails = ({navigation}) => {
             <View className="flex justify-center items-center mt-3">
                 <View className="flex flex-row align-middle justify-between w-[90%] pb-2">
                     <View className="">
-                        <Text className=" font-bold text-3xl text-white text-center ">Jobs Details </Text>
+                        <Text className=" font-bold sm:text-3xl md:text-3xl text-2xl text-white text-center ">Jobs Details </Text>
                     </View>
                 </View>
             </View>

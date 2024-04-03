@@ -9,18 +9,18 @@ const CustomHeader = ({ navigation, title, notificationCount }) => {
     Navigation.navigate('Alerts')
   }
   return (
-    <View className="flex-row w-full p-4 justify-between bg-slate-100">
+    <View className="flex-row w-full p-4 justify-between bg-slate-100">  
       <TouchableOpacity onPress={() => navigation.openDrawer()} className="flex items-center">
-        <Icon name="menu" size={32} Text="text-cyan-500" />
+       <Text className="text-cyan-500"> <Icon name="menu" size={32} Text="text-cyan-500" /></Text>
       </TouchableOpacity>
       <View className="flex relative  w-1/2 justify-between">
-        <TextInput placeholder="Search..." className="border w-full rounded-full border-cyan-500 px-4 py-1" />
+        <TextInput placeholder="Search..." placeholderTextColor="rgb(6 182 212)"  className="border w-full rounded-full border-cyan-500 px-4 py-1 placeholder:text-cyan-500 text-slate-950 text-md" />
         <TouchableOpacity className="rounded-full px-1 pt-2 absolute top-0 right-0">
-          <Icon name="magnify" size={24} />
+          <Text className="text-cyan-500"><Icon name="magnify" size={24} /></Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity className="flex items-center" onPress={handleAlertsNavigation}>
-        <Icon name="bell" size={32} />
+      <Text className="text-cyan-500"><Icon name="bell" size={32} /></Text>
         {notificationCount > 0 && (
           <View className="absolute top-0 right-0 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
             <Text className="text-white text-xs">{notificationCount}</Text>

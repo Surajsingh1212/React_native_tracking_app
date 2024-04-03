@@ -31,12 +31,12 @@ const GeofencePolygonMap = ({ navigation }) => {
                     <ScrollView>
                         <View className=" flex flex-col align-middle justify-between px-3 pt-3">
                             <Text className="w-100 mb-1 text-md font-bold text-black">Latitude : </Text>
-                            <Text className=" w-100">
+                            <Text className=" w-100 text-slate-700">
                                 23423.34,43.435,344353,3453.34,535.345,3.345,345.343</Text>
                         </View>
                         <View className=" flex flex-col align-middle justify-between p-3">
                             <Text className="w-100 mb-1 text-md font-bold text-black">Longitude : </Text>
-                            <Text className=" w-100">
+                            <Text className=" w-100 text-slate-700">
                                 23423.34,43.435,344353,3453.34,535.345,3.345,345.343</Text>
                         </View>
                         <View className="w-full px-3 py-3 flex justify-end">
