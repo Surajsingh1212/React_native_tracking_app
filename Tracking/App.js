@@ -9,7 +9,8 @@ function App() {
   return (
     <NavigationContainer>
       {/* {isLoggedIn ? <DrawerNavigator/>: <MainNavigator/>} */}
-      <DrawerNavigator/>
+      {/* <DrawerNavigator/> */}
+      <MainNavigator/>
     </NavigationContainer>
   );
 }
